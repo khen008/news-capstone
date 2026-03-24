@@ -34,9 +34,17 @@ class CustomUser(AbstractUser):
     )
 
 
-class Article(models.Model):
+"""
+Models for the news application.
+Stores articles and related information.
+"""
 
-    title = models.CharField(max_length=255)
+class Article(models.Model):
+    """
+    Represents a news article in the system.
+    """
+
+    title = models.CharField(max_length=200)
     content = models.TextField()
 
     author = models.ForeignKey(
